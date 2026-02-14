@@ -50,7 +50,7 @@ This is a binary categorical variable used for classification.
 
 ## Model Comparison Results
 
-This document provides a comprehensive analysis of six machine learning models tested on the Adult (Census Income) dataset.
+Below is the comprehensive analysis of the machine learning models tested.
 
 ---
 
