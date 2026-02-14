@@ -2,7 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import (
     accuracy_score, roc_auc_score, precision_score,
-    recall_score, f1_score, matthews_corrcoef
+    recall_score, f1_score, matthews_corrcoef, confusion_matrix
 )
 
 
@@ -28,5 +28,8 @@ def rf_model(X_train, X_test, y_train, y_test, preprocessor):
         "Precision": precision_score(y_test, y_pred),
         "Recall": recall_score(y_test, y_pred),
         "F1": f1_score(y_test, y_pred),
-        "MCC": matthews_corrcoef(y_test, y_pred)
+        "MCC": matthews_corrcoef(y_test, y_pred),
+        "confusion_matrix": confusion_matrix(y_test, y_pred),
+        "y_test": y_test,
+        "y_proba": y_prob
     }
